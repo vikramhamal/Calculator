@@ -6,62 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-    body {
-        background: linear-gradient(90deg, blue, red, orange);
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .container {
-        width: 300px;
-        height: 80vh;
-        display: flex;
-        background: transparent;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        flex-direction: column;
-        box-shadow :0px 1px 14px 0px white;
-    }
-    h1{
-        color: white;
-    }
-    input{
-        padding: 10px;
-        border: none;
-        outline: 0;
-        width: 200px;
-        font-size: 35px;
-        font-weight: bold;
-        color: white;
-        background: transparent;
-    }
-    input::placeholder{
-        font-size: 35px !important;
-        color: white;
-    }
-    button{
-        text-transform: uppercase;
-        border: none;
-        background: transparent;
-        color: white;
-        font-size: 20px;
-        box-shadow:-2px -1px 7px 1px white;
-        border-radius: 50%;
-        padding: 5px;
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-        cursor: pointer;
-    }
-    .btn{
-        background-color: rgb(64, 193, 16);
-    }
 </style>
 
 <body>
@@ -103,56 +51,7 @@
 
     </div>
 
-    <script>
-        // let input = document.getElementById('input')
-        // let buttons = document.querySelectorAll('button')
-        // let string ="";
-        // let arr = Array.from(buttons)
-        // arr.forEach(buttons =>{
-        //     buttons.addEventListener('click', (e)=>{
-        //         if (e.target.innerHTML == '=') {
-        //             string = eval(string)
-        //             input.value = string
-        //         }
-        //         else if ( e.target.innerHTML == 'AC') {
-        //             string = ""
-        //             input.value = string
-        //         }
-        //         else if ( e.target.innerHTML == 'D') {
-        //             string = string.substring( string.length(-1))
-        //             input.value = string;
-        //         }
-        //         else{
-        //             string += e.target.innerHTML
-        //             input.value =string
-        //         }
-        //     })
-        // })
-        let buttons = document.querySelectorAll('button')
-        let input = document.getElementById('input')
-        let string = "";
-        let arr = Array.from(buttons)
-        arr.forEach(buttons => {
-          buttons.addEventListener('click', (e)=>{
-            if (e.target.innerHTML == "=") {
-                string = eval(string)
-                input.value = string
-            }
-            else if (e.target.innerHTML == "AC") {
-                string =""
-                input.value = string
-            }
-            else if (e.target.innerHTML == "d"){
-                string = string.substring(0 , string.length-1)
-                input.value = string
-            }
-            else{
-                string  +=e.target.innerHTML 
-                input.value = string
-            }
-          })
-        });
-    </script>
+ <script src="index.js"></script>
 
 </body>
 
